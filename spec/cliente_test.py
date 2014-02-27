@@ -1,7 +1,7 @@
 #coding: utf-8
 import unittest
 from should_dsl import should
-from cliente import Cliente
+from sistema_veterinario.cliente import Cliente
 
 #Testes com a classe Cliente		
 class ClienteTest(unittest.TestCase):
