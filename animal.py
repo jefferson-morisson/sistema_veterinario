@@ -1,4 +1,5 @@
 #coding: utf-8
+from especie import Especie
 
 class Animal():
 
