@@ -23,3 +23,22 @@ class Consulta():
 			raise TypeError('animal tem que ser um objeto do tipo Animal')
 
 		self.resumoConsulta = resumoConsulta
+
+	def fazer_update(self, data_nova, veterinario_novo, animal_novo, resumoConsulta_novo):
+		self.data = data_nova
+		
+		#Exceção para saber se o veterinário é um objeto
+		try: 
+			veterinario_novo.__class__ == Veterinario
+			self.veterinario = veterinario_novo
+		except:
+			raise TypeError('veterinario tem que ser um objeto do tipo Veterinario')
+
+		#Exceção para saber se o animal é um objeto
+		try:
+			animal_novo.__class__ == Animal
+			self.animal = animal_novo
+		except:
+			raise TypeError('animal tem que ser um objeto do tipo Animal')
+
+		self.resumoConsulta = resumoConsulta_novo
