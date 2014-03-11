@@ -5,3 +5,7 @@ class Veterinario():
 		self.codVeterinario = codVeterinario
 		self.nome = nome
 		self.crmv = crmv
+
+	def fazer_update(self, nome_novo, crmv_novo):
+		self.nome = nome_novo
+		self.crmv = crmv_novo
