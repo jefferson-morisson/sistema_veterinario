@@ -12,3 +12,11 @@ class Animal():
 			self.especie = especie
 		except:
 			raise TypeError('especie tem que ser um objeto do tipo Especie')
+
+	def fazer_update(self, nome_novo, especie_nova):
+		self.nome = nome_novo
+		try: 
+			especie_nova.__class__ == Especie
+			self.especie = especie_nova
+		except:
+			raise TypeError('especie tem que ser um objeto do tipo Especie')
