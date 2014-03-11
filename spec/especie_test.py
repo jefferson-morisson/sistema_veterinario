@@ -10,3 +10,8 @@ class EspecieTest(unittest.TestCase):
 		especie = Especie(1, "Mamífero")
 		especie.codEspecie |should| equal_to(1)
 		especie.nome |should| equal_to("Mamífero")
+
+	def test_fazer_update_especie(self):
+		especie = Especie(1, "Mamífero")
+		especie.fazer_update("Réptil")
+		especie.nome |should| equal_to("Réptil")
