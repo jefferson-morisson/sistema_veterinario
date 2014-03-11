@@ -11,3 +11,10 @@ class VeterinarioTest(unittest.TestCase):
 		veterinario.codVeterinario |should| equal_to(5)
 		veterinario.nome |should| equal_to("Marcelo")
 		veterinario.crmv |should| equal_to("102102121")
+
+	def test_fazer_update(self):
+		veterinario = Veterinario(5, "Marcelo", "102102121")
+		veterinario.fazer_update("Carlos", "454572")
+		veterinario.nome |should| equal_to("Carlos")
+		veterinario.crmv |should| equal_to("454572")
+		
