@@ -15,3 +15,14 @@ class AnimalTest(unittest.TestCase):
 		animal.nome |should| equal_to ("Cachorro")
 		animal.sexo |should| equal_to ("Macho")
 		animal.especie |should| equal_to (especie.nome)
+
+	def test_fazer_update_animal(self):
+		especie = Especie(20, "Mamífero")
+		especie2 = Especie(50, "Felino")
+
+		animal = Animal(10, "Cachorro", "Macho", especie.nome)
+		animal.nome |should| equal_to ("Cachorro")
+
+		animal.fazer_update("Gato", especie2.nome)
+		animal.nome |should| equal_to ("Gato")
+		animal.especie |should| equal_to(especie2.nome)
